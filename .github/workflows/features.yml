@@ -1,0 +1,15 @@
+name: On new feature pushed
+
+on:
+  push:
+    branches:
+      - feature.*
+
+jobs:
+  automated_review:
+    runs-on: ubuntu-latest
+    name: Automated Code Review
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          echo "hello there"
